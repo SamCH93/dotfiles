@@ -11,7 +11,6 @@ set noerrorbells " no annoying error sound
 set ffs=unix,dos,mac " set unix as standard file type
 filetype plugin on " filetype-specific plugins
 filetype indent on " filetype-specific indentation
-set clipboard=unnamed " copying like one would expect
 
 " UI options "
 set number " enables line numbering
@@ -24,12 +23,10 @@ set noshowmode " using statusline plugin
 
 " color options "
 syntax enable " enables syntax highlighting
-set background=dark "set dark background
-colorscheme solarized "uses solarized theme
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
-set colorcolumn=100
+set background=dark " set dark background
+colorscheme gruvbox " use gruvbox colorscheme
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 " spaces & tabs "
 set tabstop=4 " displays a tab as 4 spaces
@@ -49,7 +46,12 @@ set nobackup " disable backup
 set nowb " write no backup
 set noswapfile " no swapfile
 
+" infinite undos (~/.vim/undodir needs to exist) "
+set undofile
+set undodir=~/.vim/undodir
+
 " custom keybindings "
-"nnoremap j gj " movement by screen line (not file line)
-"nnoremap k gk " movement by screen line (not file line)
+" nnoremap k gk " movement by screen line (not file line)
+" nnoremap j gj " movement by screen line (not file line)
 inoremap jj <Esc>
+:let maplocalleader = ","
