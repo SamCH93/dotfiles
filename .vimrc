@@ -50,8 +50,9 @@ set noswapfile " no swapfile
 set undofile
 set undodir=~/.vim/undodir
 
-" custom keybindings "
-" nnoremap k gk " movement by screen line (not file line)
-" nnoremap j gj " movement by screen line (not file line)
-inoremap jj <Esc>
-:let maplocalleader = ","
+" ----- custom keybindings ----- "
+"  move vertically by visual line
+nnoremap k gk 
+nnoremap j gj
+" remap leader-key
+let mapleader = "<space>"
