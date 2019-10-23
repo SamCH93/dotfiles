@@ -3,7 +3,6 @@
 " ------------------------------------------------ "
 
 " general options "
-execute pathogen#infect() 
 set nocompatible " set compatibility to Vim only
 set mouse=a " add mouse support
 set encoding=utf8 " use UTF8 encoding
@@ -19,14 +18,10 @@ set cursorline " highlights current line
 set wildmenu " shows autocompletion options for vim commands
 set showmatch " highlights matching parentheses, brackets, etc
 set laststatus=2 " adds statusline
-set noshowmode " using statusline plugin
 
 " color options "
 syntax enable " enables syntax highlighting
 set background=dark " set dark background
-colorscheme gruvbox " use gruvbox colorscheme
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
 
 " spaces & tabs "
 set tabstop=4 " displays a tab as 4 spaces
@@ -51,8 +46,5 @@ set undofile
 set undodir=~/.vim/undodir
 
 " ----- custom keybindings ----- "
-"  move vertically by visual line
-nnoremap k gk 
-nnoremap j gj
 " remap leader-key
 let mapleader = "<space>"
